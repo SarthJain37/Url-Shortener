@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'url_shortener/style.css' %}">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Shortener</h1>
+        <form method="post" action="{% url 'index' %}">
+            {% csrf_token %}
+            <label for="original_url">Enter the URL:</label>
+            <input type="url" id="original_url" name="original_url" required>
+            <button type="submit">Shorten</button>
+        </form>
+        {% if short_url %}
+            <p>Shortened URL: <a href="{% url 'redirect_to_original' short_url=short_url %}">{{ short_url }}</a></p>
+        {% endif %}
+        <a href="{% url 'url_mappings' %}">View URL Mappings</a>
+    </div>
+</body>
+</html>

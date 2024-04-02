@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'url_shortener/style.css' %}">
+    <link rel="stylesheet" href="{% static 'url_shortener/url_mappings_style.css' %}">
+    <title>URL Shortener - URL Mappings</title>
+</head>
+<body>
+    <div class="container">
+        <h1>URL Mappings</h1>
+        <ul>
+            {% for mapping in url_mappings %}
+                <li>
+                    Original URL: {{ mapping.original_url }}<br>
+                    Shortened URL: <a href="{% url 'redirect_to_original' short_url=mapping.short_url %}">{{ mapping.short_url }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
