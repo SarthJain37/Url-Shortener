@@ -15,6 +15,7 @@
 - [Contributing](#contributing)
 - [License](#license)
 - [Acknowledgements](#acknowledgements)
+- [Contact Information](#contact-information)
 
 ## Introduction
 
@@ -31,49 +32,49 @@ Welcome to the URL Shortener project! This application allows you to shorten lon
 
 ### Prerequisites
 
-- Python 3.7+
+- Python 3.1+
 - pip (Python package installer)
 
 ### Steps
 
 1. Clone the repository:
-    \`\`\`bash
+    ```bash
     git clone https://github.com/SarthJain37/Url-Shortener.git
     cd Url-Shortener
-    \`\`\`
+    ```
 
 2. Create a virtual environment:
-    \`\`\`bash
+    ```bash
     python -m venv venv
     source venv/bin/activate  # On Windows use `venv\Scripts\activate`
-    \`\`\`
+    ```
 
 3. Install the required packages:
-    \`\`\`bash
+    ```bash
     pip install -r requirements.txt
-    \`\`\`
+    ```
 
 4. Set up the database:
-    \`\`\`bash
+    ```bash
     python manage.py migrate
-    \`\`\`
+    ```
 
 5. Run the application:
-    \`\`\`bash
+    ```bash
     python manage.py runserver
-    \`\`\`
+    ```
 
 ## Usage
 
-After starting the server, navigate to \`http://localhost:8000\` in your web browser to access the URL Shortener interface. Here you can enter long URLs and receive shortened versions.
+After starting the server, navigate to `http://localhost:8000` in your web browser to access the URL Shortener interface. Here you can enter long URLs and receive shortened versions.
 
 ### API Usage
 
-To use the RESTful API, you can send a POST request to the \`/api/shorten\` endpoint with the URL you wish to shorten. Example:
+To use the REST API, you can send a POST request to the \`/api/shorten\` endpoint with the URL you wish to shorten. Example:
 
-\`\`\`bash
+```bash
 curl -X POST http://localhost:8000/api/shorten -d "url=http://example.com"
-\`\`\`
+```
 
 ## Contributing
 
@@ -96,3 +97,11 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - [Django](https://www.djangoproject.com/) - The web framework used.
 - [Bootstrap](https://getbootstrap.com/) - For responsive UI design.
 - [Font Awesome](https://fontawesome.com/) - For icons.
+
+## Contact Information
+
+For any questions or inquiries, please contact:
+
+- **Name**: Sarthak Boralkar
+- **Email**: [Email Me](mailto:sarthakboralkar@gmail.com)
+- **GitHub**: [SarthJain37](https://github.com/SarthJain37)
