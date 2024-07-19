@@ -95,4 +95,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - [Django](https://www.djangoproject.com/) - The web framework used.
 - [Bootstrap](https://getbootstrap.com/) - For responsive UI design.
-- [Font Awesome](https://fontawesome.com/) - For icons.
+- [Font Awesome](https://fontawesome.com/) - For icons. 
